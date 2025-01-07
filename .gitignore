@@ -1,3 +1,5 @@
 backend/node_modules/ 
 peppi/build/ 
 peppi/*.user
+
+backend/.env
