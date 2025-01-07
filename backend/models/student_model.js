@@ -20,6 +20,9 @@ const student={
     },
     delete:function(id, callback){
         return db.query('DELETE FROM student WHERE idstudent=?',[id], callback);
+    },
+    checkPassword:function(username, callback){
+        return db.query('SELECT password FROM student WHERE username=?',[username],callback);
     }   
 }
 

@@ -1,0 +1,2 @@
+SQL_SERVER = 'mysql://peppiuser:peppipass@localhost:3306/peppi'
+MY_TOKEN = 7EW31B0MKeiryxjZAozxtJn4PjAZtORgQ+7DG2zW6sCGNPnYcLdOifApF9bOd2rQJ6rJmI/+DSnVk1KNCEw9aw==
