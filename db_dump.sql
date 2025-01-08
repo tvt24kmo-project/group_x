@@ -29,7 +29,7 @@ CREATE TABLE `course` (
   `name` varchar(45) DEFAULT NULL,
   `ects` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idcourse`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `course` (
 
 LOCK TABLES `course` WRITE;
 /*!40000 ALTER TABLE `course` DISABLE KEYS */;
+INSERT INTO `course` VALUES (1,'C#','5'),(2,'Java','3'),(3,'C++','5');
 /*!40000 ALTER TABLE `course` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,12 +54,13 @@ CREATE TABLE `grade` (
   `grade_date` date DEFAULT NULL,
   `idstudent` int DEFAULT NULL,
   `idcourse` int DEFAULT NULL,
+  `grade` smallint DEFAULT NULL,
   PRIMARY KEY (`idgrade`),
   KEY `student_grade_idx` (`idstudent`),
   KEY `course_grade_idx` (`idcourse`),
   CONSTRAINT `course_grade` FOREIGN KEY (`idcourse`) REFERENCES `course` (`idcourse`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `student_grade` FOREIGN KEY (`idstudent`) REFERENCES `student` (`idstudent`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,6 +69,7 @@ CREATE TABLE `grade` (
 
 LOCK TABLES `grade` WRITE;
 /*!40000 ALTER TABLE `grade` DISABLE KEYS */;
+INSERT INTO `grade` VALUES (1,'2025-01-08',1,1,5),(2,'2025-01-08',1,2,3),(3,'2025-01-08',1,3,4),(5,'2025-01-08',3,1,4),(6,'2025-01-08',3,2,4);
 /*!40000 ALTER TABLE `grade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +89,7 @@ CREATE TABLE `student` (
   `address` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idstudent`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,6 +98,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES (1,'user01','$2a$10$zPKrb4sRYRKAPkIGWWjkregot8qvSJYlzj0srV6XVXTwsPMKeBwna','Teppo','Testi','Uusikatu 4'),(3,'user02','$2a$10$jazqkfq/izjInt3MqmKFNO/4mOyNCxCU4wQ.JioGbWhS.UdGuJsE6','Liisa','Joki','Isokatu 5');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-07 18:10:22
+-- Dump completed on 2025-01-08 19:45:53
