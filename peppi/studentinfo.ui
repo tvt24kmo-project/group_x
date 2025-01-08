@@ -44,6 +44,42 @@
     <string>My Data</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btnGrade">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>130</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>My Grades</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelGrade">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>220</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textGrades">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>270</y>
+     <width>231</width>
+     <height>121</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
