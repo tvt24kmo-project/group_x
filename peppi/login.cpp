@@ -1,5 +1,6 @@
 #include "environment.h"
 #include "login.h"
+#include "studentinfo.h"
 #include "ui_login.h"
 
 Login::Login(QWidget *parent) :
@@ -42,6 +43,11 @@ void Login::loginSlot(QNetworkReply *reply)
         else {
             if(response_data!="false" && response_data.length()>20) {
                ui->labelInfo->setText("Kirjautuminen OK");
+               QByteArray myToken="Bearer "+response_data;
+               StudentInfo *objStudentInfo=new StudentInfo(this);
+               objStudentInfo->setUsername(ui->textUsername->text());
+               objStudentInfo->setMyToken(myToken);
+               objStudentInfo->open();
             }
             else {
                ui->labelInfo->setText("Väärä tunnus/salasana");
