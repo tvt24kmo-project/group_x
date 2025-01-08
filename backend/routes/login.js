@@ -13,7 +13,7 @@ router.post('/',
       
         student.checkPassword(user, function(dbError, dbResult) {
           if(dbError){
-            response.json(dbError);
+            response.send("-11");
           }
           else{
             if (dbResult.length > 0) {
