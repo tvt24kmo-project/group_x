@@ -5,8 +5,8 @@ const student={
     getAll:function(callback) {
         return db.query('SELECT * FROM student', callback);
     },
-    getById:function(id, callback){
-        return db.query('SELECT * FROM student WHERE idstudent=?',[id],callback);
+    getById:function(un, callback){
+        return db.query('SELECT * FROM student WHERE username=?',[un],callback);
     },
     add:function(student_data, callback){
         bcrypt.hash(student_data.password, 10, function(err, hashed_password){

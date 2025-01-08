@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var studentRouter = require('./routes/student');
 var loginRouter = require('./routes/login');
+var gradeRouter = require('./routes/grade');
 const jwt = require('jsonwebtoken');
 
 var app = express();
@@ -20,6 +21,7 @@ app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use(authenticateToken);
 app.use('/student', studentRouter);
+app.use('/grade', gradeRouter);
 
 
 function authenticateToken(req, res, next) {

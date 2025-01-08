@@ -13,16 +13,22 @@ SOURCES += \
     environment.cpp \
     login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    studentdata.cpp \
+    studentinfo.cpp
 
 HEADERS += \
     environment.h \
     login.h \
-    mainwindow.h
+    mainwindow.h \
+    studentdata.h \
+    studentinfo.h
 
 FORMS += \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    studentdata.ui \
+    studentinfo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
