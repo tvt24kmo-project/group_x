@@ -15,7 +15,7 @@ Ja lopullinen ER-kaavio on seuraava:
 ## Luokkakaavio
 
 Backendin osalta luokkakaavio olisi allaoleva. Laitoin kuitenkin siihen vain Student-taulun osuuden ja App.js:n.
-<img src="classDg.jpg">
+<img src="classDiagram.png">
 
 ## Backend
 
