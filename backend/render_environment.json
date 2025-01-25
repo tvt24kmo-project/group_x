@@ -1,0 +1,21 @@
+{
+	"id": "b6d2c9a2-bad8-46ef-927a-edd9c5ea8e61",
+	"name": "render-peppi",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "https://university-mgt6.onrender.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "webToken",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-01-25T20:37:54.253Z",
+	"_postman_exported_using": "Postman/11.29.5"
+}

@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "38bb1a5f-5fd6-4ed6-b8ee-060fc66d9b43",
+		"name": "peppi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13170477"
+	},
+	"item": [
+		{
+			"name": "addStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user03",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass03",
+							"type": "text"
+						},
+						{
+							"key": "fname",
+							"value": "Teppo",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "Testi",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Uusikatu 4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/student",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllStudent",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/student",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AllStudent",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/student",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "9"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Jan 2025 09:44:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Forbidden"
+				}
+			]
+		},
+		{
+			"name": "OneStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/student/user01",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"student",
+						"user01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user02",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass02",
+							"type": "text"
+						},
+						{
+							"key": "fname",
+							"value": "Liisa",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "Joki",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Isokatu 5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/student/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/student/4",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"student",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user01",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showGrades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/grade/user01",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"grade",
+						"user01"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{webToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.sendRequest({\r",
+					"    url: 'http://localhost:3000/login',\r",
+					"    method: 'POST',\r",
+					"    header: {\r",
+					"        'Content-Type': 'application/json'\r",
+					"    },\r",
+					"    body: {\r",
+					"        mode: 'raw',\r",
+					"        raw: JSON.stringify({\r",
+					"            username: 'user01',\r",
+					"            password: 'pass01'\r",
+					"        })\r",
+					"    }\r",
+					"}, function (err, response) {\r",
+					"    if (err) {\r",
+					"        console.error('Request failed:', err);\r",
+					"        return;\r",
+					"    }\r",
+					"\r",
+					"    console.log('Response status:', response.status); // Näytä statuskoodi\r",
+					"\r",
+					"    // Tarkistetaan, että vastaus sisältää body-tiedot\r",
+					"    if (response && response.text()) {\r",
+					"        const token = response.text().trim(); \r",
+					"        console.log('Token received:', token);\r",
+					"\r",
+					"        if (token) {\r",
+					"            pm.environment.set('webToken', token); // Tallenna token ympäristömuuttujaan\r",
+					"            console.log('Token:', token); // Tulostetaan token varmennusta varten\r",
+					"        } else {\r",
+					"            console.error('No token found in the response body.');\r",
+					"        }\r",
+					"    } else {\r",
+					"        console.error('Response body is empty or undefined');\r",
+					"    }\r",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

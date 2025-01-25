@@ -21,6 +21,8 @@ router.post('/',
                 if(compareResult) {
                   console.log("success");
                   const token = generateAccessToken({ username: user });
+                 
+                  response.setHeader('Content-Type', 'application/json'); 
                   response.send(token);
                 }
                 else {
