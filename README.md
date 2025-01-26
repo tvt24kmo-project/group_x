@@ -1,6 +1,6 @@
 # Peppi esimerkki
 
-Teen esimerkkinä sovelluksen, jonka toiminta on  seuraava 
+Teen esimerkkinä Peppiä muistuttavan sovelluksen, jonka toiminta on  seuraava 
 
 <img src="frontend_plan.png">
 
