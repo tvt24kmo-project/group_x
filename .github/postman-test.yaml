@@ -34,4 +34,4 @@ jobs:
       run: npm install -g newman
 
     - name: Run Postman Tests
-      run: newman run ./peppi_collection.json -e ./render_environment.json
+      run: newman run ./backend/peppi_collection.json -e ./backend/render_environment.json
