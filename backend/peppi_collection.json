@@ -70,6 +70,21 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"// Testaa, onko vastaus  JSON-array\r",
+							"pm.test(\"Response is valid JSON-array\", function () {\r",
+							"    let isJsonArray = true;\r",
+							"    let jsonData;\r",
+							"\r",
+							"    try {\r",
+							"        jsonData = JSON.parse(pm.response.text());\r",
+							"    } catch (e) {\r",
+							"        isJsonArray = false;\r",
+							"    }\r",
+							"\r",
+							"    // Tarkista, että JSON on taulukko\r",
+							"    pm.expect(isJsonArray, \"Response is not valid JSON\").to.be.true;\r",
+							"    pm.expect(jsonData, \"Response is not valid JSON-array\").to.be.an(\"array\");\r",
+							"});\r",
 							""
 						],
 						"type": "text/javascript",
@@ -172,6 +187,32 @@
 		},
 		{
 			"name": "OneStudent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Testaa, onko vastaus validi JSON-objekti eikä taulukko\r",
+							"pm.test(\"Vastaus on validi JSON-objekti\", function () {\r",
+							"    let isJsonObject = true;\r",
+							"    let jsonData;\r",
+							"\r",
+							"    try {\r",
+							"        jsonData = JSON.parse(pm.response.text());\r",
+							"    } catch (e) {\r",
+							"        isJsonObject = false;\r",
+							"    }\r",
+							"\r",
+							"    // Tarkista, että JSON on objekti eikä taulukko\r",
+							"    pm.expect(isJsonObject).to.be.true;\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
