@@ -3,7 +3,7 @@ const bcrypt=require('bcryptjs');
 
 const student={
     getAll:function(callback) {
-        return db.query('SELECT * FROM student', callback);
+        return db.query('SELECT * FROM student2', callback);
     },
     getById:function(un, callback){
         return db.query('SELECT * FROM student WHERE username=?',[un],callback);
