@@ -323,7 +323,7 @@
 				"packages": {},
 				"exec": [
 					"pm.sendRequest({\r",
-					"    url: 'http://localhost:3000/login',\r",
+					"    url: pm.environment.get('base_url')+'/login',\r",
 					"    method: 'POST',\r",
 					"    header: {\r",
 					"        'Content-Type': 'application/json'\r",
