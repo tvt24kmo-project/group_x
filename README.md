@@ -17,6 +17,7 @@ Ja lopullinen ER-kaavio on seuraava:
 Backendin osalta luokkakaavio olisi allaoleva. Laitoin kuitenkin siihen vain Student-taulun osuuden ja App.js:n.
 <img src="classDiagram.png">
 
+
 ## Backend
 
 Jotta sovellus toimii on kloonauksen jälkeen tehtävä seuraavat toimenpiteet:
