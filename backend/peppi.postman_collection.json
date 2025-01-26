@@ -88,7 +88,7 @@
 							"    jsonData.forEach((item, index) => {\r",
 							"        pm.expect(item, `Object in ${index} is not an object`).to.be.an(\"object\");\r",
 							"\r",
-							"        // Tarkista, että vaaditut kentät ovat olemassa\r",
+							"        // Check all fields in all objects\r",
 							"        pm.expect(item, `In Object ${index} missing 'idstudent'`).to.have.property(\"idstudent\");\r",
 							"        pm.expect(item, `In Object ${index} missing 'username'`).to.have.property(\"username\");\r",
 							"        pm.expect(item, `In Object ${index} missing 'password'`).to.have.property(\"password\");\r",
