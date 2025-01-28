@@ -25,7 +25,9 @@ void Login::on_btnLogin_clicked()
     QNetworkRequest request(site_url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     postManager = new QNetworkAccessManager(this);
-    connect(postManager,SIGNAL(finished(QNetworkReply*)), this, SLOT(loginSlot(QNetworkReply*)));
+    //connect(postManager,SIGNAL(finished(QNetworkReply*)), this, SLOT(loginSlot(QNetworkReply*)));
+    //korvataan uudella versiolla
+    connect(postManager, &QNetworkAccessManager::finished, this, &Login::loginSlot);
     reply = postManager->post(request, QJsonDocument(jsonObj).toJson());
 }
 

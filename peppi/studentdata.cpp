@@ -34,8 +34,9 @@ void StudentData::on_btnShowData_clicked()
     //WEBTOKEN LOPPU
     dataManager = new QNetworkAccessManager(this);
 
-    connect(dataManager, SIGNAL(finished (QNetworkReply*)), this, SLOT(showDataSlot(QNetworkReply*)));
-
+    //connect(dataManager, SIGNAL(finished (QNetworkReply*)), this, SLOT(showDataSlot(QNetworkReply*)));
+    //korvataan uudella versiolla
+    connect(dataManager,&QNetworkAccessManager::finished,this,&StudentData::showDataSlot);
     reply = dataManager->get(request);
 }
 

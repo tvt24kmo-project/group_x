@@ -47,8 +47,9 @@ void StudentInfo::on_btnGrade_clicked()
     request.setRawHeader(QByteArray("Authorization"),(myToken));
     //WEBTOKEN LOPPU
     gradeManager = new QNetworkAccessManager(this);
-
-    connect(gradeManager, SIGNAL(finished (QNetworkReply*)), this, SLOT(gradeSlot(QNetworkReply*)));
+    //connect(gradeManager, SIGNAL(finished (QNetworkReply*)), this, SLOT(gradeSlot(QNetworkReply*)));
+    //korvataan uudella versiolla
+    connect(gradeManager, &QNetworkAccessManager::finished, this, &StudentInfo::gradeSlot);
 
     reply = gradeManager->get(request);
 }
