@@ -1,4 +1,2 @@
 CREATE USER peppiuser@'localhost' IDENTIFIED BY 'peppipass';
 GRANT ALL ON peppi.* TO peppiuser@'localhost';
-
-//
